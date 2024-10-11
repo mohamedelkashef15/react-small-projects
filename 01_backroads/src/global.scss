@@ -1,0 +1,83 @@
+$cyan: #2aafbb;
+$light-cyan: #88ebf2;
+$dark-blue: #0f2a42;
+$light-blue: #617d98;
+$bg-primary: #f1f5f8;
+$dark-green: #044e53;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 3rem;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  line-height: 1.5;
+}
+
+.btn.btn-primary {
+  color: $cyan;
+  background-color: $bg-primary;
+  font-size: 22px;
+  letter-spacing: 3px;
+  border: 1px solid $bg-primary;
+  padding: 20px 35px;
+
+  &:hover {
+    background-color: transparent;
+    color: $bg-primary;
+    border: 1px solid $bg-primary;
+    transition: all 0.5s ease;
+  }
+}
+
+.btn.btn-secondary {
+  background-color: $cyan;
+  color: #fff;
+  letter-spacing: 5px;
+  padding: 12px 20px;
+  font-size: 15px;
+}
+
+.text-primary {
+  color: $cyan;
+}
+
+h2,
+h3 {
+  color: $dark-blue;
+}
+
+.heading-2 {
+  text-align: center;
+  font-size: 45px;
+  margin-bottom: 4rem;
+  letter-spacing: 4px;
+}

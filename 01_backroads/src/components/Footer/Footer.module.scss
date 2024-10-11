@@ -1,0 +1,35 @@
+@import "../../global.scss";
+
+.footer {
+  background-color: $dark-blue;
+  padding: 5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  ul {
+    display: flex;
+    justify-content: center;
+
+    li a {
+      color: #fff;
+      margin: 0 20px;
+    }
+  }
+
+  .social {
+    margin: 2rem 0;
+    svg {
+      font-size: 30px;
+      color: #fff;
+      margin: 0 15px;
+    }
+  }
+  p {
+    color: #fff;
+    a {
+      color: $cyan;
+      font-weight: 600;
+    }
+  }
+}

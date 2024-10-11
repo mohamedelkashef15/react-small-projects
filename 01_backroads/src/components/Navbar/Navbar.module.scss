@@ -1,0 +1,36 @@
+@import "../../global.scss";
+.navbar * {
+  z-index: 10;
+}
+.navbar {
+  background-color: $bg-primary;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1rem;
+  height: 70px;
+  ul {
+    display: flex;
+
+    li a {
+      margin: 0 10px;
+      color: $dark-blue;
+      letter-spacing: 3px;
+      font-weight: 400;
+    }
+  }
+  .social svg {
+    color: $cyan;
+    margin: 0 5px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+}
