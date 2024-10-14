@@ -1,0 +1,6 @@
+Project functionality 
+  - Fetch data from an API 
+  - let user read the entire text 
+  - if we clicked on not interested then the tour will be removed
+  - if there are no more tours we will display a text with "No tours left" and refresh button 
+  
