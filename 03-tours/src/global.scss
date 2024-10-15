@@ -43,3 +43,11 @@ p {
   margin-top: 20px;
   border: none;
 }
+
+.btn-link {
+  border: none;
+  background-color: transparent;
+  color: $light-green;
+  font-weight: 700;
+  cursor: pointer;
+}

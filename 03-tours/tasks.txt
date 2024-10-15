@@ -1,6 +1,7 @@
 Project functionality 
   - Fetch data from an API 
-  - let user read the entire text 
+  - let user read the entire text on click to read more
+    - Create a button read more display it after 
+
   - if we clicked on not interested then the tour will be removed
   - if there are no more tours we will display a text with "No tours left" and refresh button 
-  
