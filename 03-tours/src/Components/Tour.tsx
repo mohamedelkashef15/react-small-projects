@@ -2,10 +2,11 @@ import { useState } from "react";
 import { ITour } from "../interfaces";
 import styles from "./Tour.module.scss";
 
-function Tour({ image, info, name, price }: ITour) {
-  const [isExtended, setIsExtended] = useState(true);
+function Tour({ id, image, info, name, price, deleteItem }: ITour) {
+  const [isExtended, setIsExtended] = useState(false);
   const words = info.split(" ");
   const limit = 30;
+
   return (
     <div className={styles.tour}>
       <span className={styles.price}>{price}</span>
@@ -19,7 +20,9 @@ function Tour({ image, info, name, price }: ITour) {
             {isExtended ? "Read Less" : "Read More"}
           </button>
         </div>
-        <button className="btn">Not Intersted</button>
+        <button className="btn" onClick={() => deleteItem(id)}>
+          Not Intersted
+        </button>
       </div>
     </div>
   );

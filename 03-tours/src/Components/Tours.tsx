@@ -21,6 +21,10 @@ function Tours() {
     getTours();
   }, []);
 
+  function handleDeleteItems(id: string) {
+    setTours(tours.filter((tour: ITour) => tour.id !== id));
+  }
+
   return (
     <section className={styles.tours}>
       <div className="container">
@@ -28,7 +32,17 @@ function Tours() {
         <span className="line"></span>
         <div className={styles.row}>
           {tours.map((tour: ITour) => {
-            return <Tour key={tour.id} image={tour.image} info={tour.info} name={tour.name} price={tour.price} />;
+            return (
+              <Tour
+                id={tour.id}
+                key={tour.id}
+                image={tour.image}
+                info={tour.info}
+                name={tour.name}
+                price={tour.price}
+                deleteItem={handleDeleteItems}
+              />
+            );
           })}
         </div>
       </div>
