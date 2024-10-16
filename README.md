@@ -2,6 +2,8 @@
 
 ## Tours
 
+Project Functionality
+
 - How to delete an item from a list
 - Remove item from list when click to a button using filter
 - Display loading component while fetching data
