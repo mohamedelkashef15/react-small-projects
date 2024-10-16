@@ -31,6 +31,10 @@ function Tours() {
     fetchData();
   }, []);
 
+  if (isLoading) {
+    return <Loading />;
+  }
+
   if (tours.length === 0) {
     return <NoTours fetchData={fetchData} />;
   }
@@ -40,7 +44,6 @@ function Tours() {
       <div className="container">
         <h1>Our Tours</h1>
         <div className={styles.lineThrough}></div>
-        {isLoading && <Loading />}
         <div className={styles.row}>
           {tours.map((tour: ITour) => {
             return (
