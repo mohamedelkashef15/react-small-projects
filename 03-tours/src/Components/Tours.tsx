@@ -3,6 +3,7 @@ import styles from "./Tours.module.scss";
 import Loading from "./Loading";
 import Tour from "./Tour";
 import { ITour } from "../interfaces";
+import NoTours from "./NoTours";
 
 const url = "https://www.course-api.com/react-tours-project";
 function Tours() {
@@ -13,21 +14,26 @@ function Tours() {
     setTours(tours.filter((tour: ITour) => tour.id !== undefined && tour.id !== id));
   }
 
-  useEffect(function () {
-    async function fetchData() {
-      try {
-        setIsLoading(true);
-        const res = await fetch(url);
-        const data = await res.json();
-        setTours(data);
-      } catch (err) {
-        console.log(err);
-      } finally {
-        setIsLoading(false);
-      }
+  async function fetchData() {
+    try {
+      setIsLoading(true);
+      const res = await fetch(url);
+      const data = await res.json();
+      setTours(data);
+    } catch (err) {
+      console.log(err);
+    } finally {
+      setIsLoading(false);
     }
+  }
+
+  useEffect(function () {
     fetchData();
   }, []);
+
+  if (tours.length === 0) {
+    return <NoTours fetchData={fetchData} />;
+  }
 
   return (
     <section className={styles.tours}>
