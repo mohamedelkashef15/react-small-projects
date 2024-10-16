@@ -2,11 +2,12 @@
 
 .tours {
   padding: 5rem 0;
+
   h1 {
     text-align: center;
     font-size: 45px;
     font-weight: 400;
-    margin-bottom: 3rem;
+    margin-bottom: 10px;
 
     .line {
       background-color: $light-green;
@@ -14,6 +15,14 @@
       width: 200px;
       color: red;
     }
+  }
+
+  .lineThrough {
+    width: 100px;
+    height: 4px;
+    background-color: $light-green;
+    margin: 0 auto;
+    margin-bottom: 3rem;
   }
 
   .row {

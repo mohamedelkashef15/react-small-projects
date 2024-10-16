@@ -2,9 +2,9 @@ import Tours from "./Components/Tours";
 
 function App() {
   return (
-    <main>
+    <div>
       <Tours />
-    </main>
+    </div>
   );
 }
 

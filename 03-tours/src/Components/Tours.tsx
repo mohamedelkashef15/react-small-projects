@@ -1,46 +1,51 @@
 import { useEffect, useState } from "react";
 import styles from "./Tours.module.scss";
+import Loading from "./Loading";
 import Tour from "./Tour";
 import { ITour } from "../interfaces";
 
 const url = "https://www.course-api.com/react-tours-project";
 function Tours() {
-  const [tours, setTours] = useState([]);
+  const [tours, setTours] = useState<ITour[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
+
+  function handleDeleteItem(id: string) {
+    setTours(tours.filter((tour: ITour) => tour.id !== undefined && tour.id !== id));
+  }
 
   useEffect(function () {
-    async function getTours() {
+    async function fetchData() {
       try {
+        setIsLoading(true);
         const res = await fetch(url);
         const data = await res.json();
         setTours(data);
       } catch (err) {
-        alert(`There are an error while fetching data ${err}`);
+        console.log(err);
+      } finally {
+        setIsLoading(false);
       }
     }
-
-    getTours();
+    fetchData();
   }, []);
-
-  function handleDeleteItems(id: string) {
-    setTours(tours.filter((tour: ITour) => tour.id !== id));
-  }
 
   return (
     <section className={styles.tours}>
       <div className="container">
         <h1>Our Tours</h1>
-        <span className="line"></span>
+        <div className={styles.lineThrough}></div>
+        {isLoading && <Loading />}
         <div className={styles.row}>
           {tours.map((tour: ITour) => {
             return (
               <Tour
-                id={tour.id}
                 key={tour.id}
-                image={tour.image}
-                info={tour.info}
+                id={tour.id}
                 name={tour.name}
+                info={tour.info}
+                image={tour.image}
                 price={tour.price}
-                deleteItem={handleDeleteItems}
+                onDeleteItem={handleDeleteItem}
               />
             );
           })}
