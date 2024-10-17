@@ -5,5 +5,5 @@ export interface ICard {
   job: string;
   text: string;
   index: number;
-  setIndex: (index: number) => void;
+  setIndex: (val: () => number) => void;
 }

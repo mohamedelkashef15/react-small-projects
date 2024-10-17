@@ -1,21 +1,43 @@
 import { ICard } from "../interfaces";
 import styles from "./Card.module.scss";
-import reviews from "../data";
+
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
+import people from "../data";
 
 function Card({ img, name, job, text, index, setIndex }: ICard) {
-  const random = Math.trunc(Math.random() * 4);
+  function checkNumber(number: number) {
+    if (number > people.length - 1) {
+      return 0;
+    }
 
-  function handleNextItem() {
-    if (index < reviews.length - 1) setIndex(index + 1);
+    if (number < 0) {
+      return people.length - 1;
+    }
+
+    return number;
   }
 
   function handlePrevItem() {
-    if (index > 0) setIndex(index - 1);
+    setIndex(() => {
+      const newIndex = index - 1;
+      return checkNumber(newIndex);
+    });
+  }
+  function handleNextItem() {
+    setIndex(() => {
+      const newIndex = index + 1;
+      return checkNumber(newIndex);
+    });
   }
 
+  // if we setIndex(randomNumber) it will show bug becasue random number may be duplicated
   function handleRandomItem() {
-    setIndex(random);
+    const randomNumber = Math.floor(Math.random() * people.length);
+    console.log(randomNumber);
+    setIndex(() => {
+      if (randomNumber === index) return checkNumber(randomNumber);
+      return randomNumber;
+    });
   }
 
   return (
