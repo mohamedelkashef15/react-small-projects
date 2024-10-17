@@ -5,6 +5,7 @@ import Card from "./Card";
 
 function Cards() {
   const [index, setIndex] = useState(0);
+
   return (
     <section className={styles.cards}>
       <Card

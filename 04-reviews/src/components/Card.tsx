@@ -5,12 +5,18 @@ import styles from "./Card.module.scss";
 import reviews from "../data";
 
 function Card({ img, name, job, text, index, setIndex }: ICard) {
+  const random = Math.floor(Math.random() * 4);
+
   function handleNextItem() {
     if (index < reviews.length - 1) setIndex(index + 1);
   }
 
   function handlePrevItem() {
     if (index > 0) setIndex(index - 1);
+  }
+
+  function handleRandomItem() {
+    setIndex(random);
   }
 
   return (
@@ -25,6 +31,9 @@ function Card({ img, name, job, text, index, setIndex }: ICard) {
 
         <FontAwesomeIcon icon={faChevronRight} onClick={handleNextItem} />
       </div>
+      <button type="button" className="btn" onClick={handleRandomItem}>
+        Surpirse Me
+      </button>
     </div>
   );
 }

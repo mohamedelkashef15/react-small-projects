@@ -21,3 +21,12 @@ body {
   margin: auto;
   padding: 0 2rem;
 }
+
+.btn {
+  padding: 6px 12px;
+  color: $dark-purple;
+  background-color: $light-purple;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
