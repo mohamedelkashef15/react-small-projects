@@ -5,7 +5,7 @@ import styles from "./Card.module.scss";
 import reviews from "../data";
 
 function Card({ img, name, job, text, index, setIndex }: ICard) {
-  const random = Math.floor(Math.random() * 4);
+  const random = Math.trunc(Math.random() * 4);
 
   function handleNextItem() {
     if (index < reviews.length - 1) setIndex(index + 1);
@@ -16,6 +16,7 @@ function Card({ img, name, job, text, index, setIndex }: ICard) {
   }
 
   function handleRandomItem() {
+    console.log(random);
     setIndex(random);
   }
 
