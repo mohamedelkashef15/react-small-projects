@@ -1,8 +1,7 @@
 import { ICard } from "../interfaces";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronRight, faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import styles from "./Card.module.scss";
 import reviews from "../data";
+import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 
 function Card({ img, name, job, text, index, setIndex }: ICard) {
   const random = Math.trunc(Math.random() * 4);
@@ -16,7 +15,6 @@ function Card({ img, name, job, text, index, setIndex }: ICard) {
   }
 
   function handleRandomItem() {
-    console.log(random);
     setIndex(random);
   }
 
@@ -28,9 +26,8 @@ function Card({ img, name, job, text, index, setIndex }: ICard) {
       <h4>{job}</h4>
       <p>{text}</p>
       <div className={styles.icons}>
-        <FontAwesomeIcon icon={faChevronLeft} onClick={handlePrevItem} />
-
-        <FontAwesomeIcon icon={faChevronRight} onClick={handleNextItem} />
+        <FaChevronLeft onClick={handlePrevItem} />
+        <FaChevronRight onClick={handleNextItem} />
       </div>
       <button type="button" className="btn" onClick={handleRandomItem}>
         Surpirse Me
