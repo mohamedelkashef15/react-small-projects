@@ -1,0 +1,44 @@
+@import "../global.scss";
+
+.card {
+  padding: 3rem;
+  background-color: #fff;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  img {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
+
+  h2 {
+    font-weight: 300;
+    font-size: 30px;
+    text-transform: capitalize;
+  }
+
+  h4 {
+    font-weight: 500;
+    margin-top: 5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: $dark-purple;
+  }
+
+  p {
+    line-height: 1.4;
+    margin: 15px 0;
+    color: $dark-gray;
+  }
+  .icons {
+    svg {
+      margin: 0 10px;
+      color: $dark-purple;
+      cursor: pointer;
+      font-size: 20px;
+    }
+  }
+}
