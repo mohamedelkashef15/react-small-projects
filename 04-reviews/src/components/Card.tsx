@@ -9,11 +9,9 @@ function Card({ img, name, job, text, index, setIndex }: ICard) {
     if (number > people.length - 1) {
       return 0;
     }
-
     if (number < 0) {
       return people.length - 1;
     }
-
     return number;
   }
 
@@ -23,6 +21,7 @@ function Card({ img, name, job, text, index, setIndex }: ICard) {
       return checkNumber(newIndex);
     });
   }
+
   function handleNextItem() {
     setIndex(() => {
       const newIndex = index + 1;
@@ -30,13 +29,10 @@ function Card({ img, name, job, text, index, setIndex }: ICard) {
     });
   }
 
-  // if we setIndex(randomNumber) it will show bug becasue random number may be duplicated
   function handleRandomItem() {
     const randomNumber = Math.floor(Math.random() * people.length);
-    console.log(randomNumber);
     setIndex(() => {
-      if (randomNumber === index) return checkNumber(randomNumber);
-      return randomNumber;
+      return checkNumber(randomNumber);
     });
   }
 
