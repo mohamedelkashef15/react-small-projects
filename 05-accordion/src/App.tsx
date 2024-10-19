@@ -1,5 +1,11 @@
+import Questions from "./components/Questions";
+
 function App() {
-  return <div>App</div>;
+  return (
+    <main id="main">
+      <Questions />
+    </main>
+  );
 }
 
 export default App;
