@@ -29,4 +29,4 @@ Project Functionality
 
 Project Functionality
 
-- on click to menu category item display items that includes that category
+- on click to menu category item display items that includes that category using filter method
