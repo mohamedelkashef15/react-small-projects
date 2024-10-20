@@ -1,11 +1,15 @@
+import { useState } from "react";
 import styles from "./Categories.module.scss";
+import Category from "./Category";
+
+const categories = ["All", "Breakfast", "Lunch", "Shakes"];
+
 function Categories() {
   return (
     <div className={styles.categories}>
-      <button className={styles.btnCat}>All</button>
-      <button className={styles.btnCat}>Breakfast</button>
-      <button className={styles.btnCat}>Lunch</button>
-      <button className={styles.btnCat}>Shakes</button>
+      {categories.map((category) => {
+        return <Category key={category} category={category} onSelect={() => setSelectedCategory(category)} />;
+      })}
     </div>
   );
 }

@@ -1,0 +1,12 @@
+@import "../global.scss";
+
+.btnCat {
+  padding: 5px 15px;
+  margin: 0 10px;
+  background-color: $orange;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
