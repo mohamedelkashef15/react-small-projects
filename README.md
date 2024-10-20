@@ -24,3 +24,9 @@ Project Functionality
 
 - display questions from data
 - hide/show paragraph when clicking into + & - icon
+
+## Menu
+
+Project Functionality
+
+- on click to menu category item display items that includes that category
