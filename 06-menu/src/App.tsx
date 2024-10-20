@@ -1,5 +1,11 @@
+import Menu from "./components/Menu";
+
 function App() {
-  return <main></main>;
+  return (
+    <main>
+      <Menu />
+    </main>
+  );
 }
 
 export default App;
