@@ -30,7 +30,7 @@ function Menu() {
           <div className={styles.row}>
             {filteredCategory.map((item) => {
               return (
-                <div className={styles.item}>
+                <div className={styles.item} key={item.id}>
                   <img src={item.img} alt={item.title} />
                   <div className={styles.itemContent}>
                     <h3>

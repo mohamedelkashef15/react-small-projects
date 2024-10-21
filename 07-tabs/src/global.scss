@@ -2,6 +2,7 @@ $bg-white: #f8fafc;
 $dark-blue: #0f172a;
 $grayish-Blue: #334155;
 $light-gray: #cbd5e1;
+$cyan: #14b8a6;
 
 * {
   margin: 0;
@@ -14,4 +15,9 @@ body {
     "Helvetica Neue", sans-serif;
 
   background-color: $bg-white;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
 }

@@ -1,0 +1,16 @@
+@import "../../global.scss";
+
+.sidebar {
+  .btn {
+    display: block;
+    border: none;
+    background: transparent;
+    margin: 20px 0;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &.actvie {
+      color: $cyan;
+    }
+  }
+}
