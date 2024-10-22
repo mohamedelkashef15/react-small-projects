@@ -13,5 +13,7 @@ export interface IContent {
 }
 
 export interface ISidebar {
-  setIndex: (index: number) => void;
+  jobs: IJobs[];
+  currentIndex: number;
+  setCurrentIndex: (index: number) => void;
 }

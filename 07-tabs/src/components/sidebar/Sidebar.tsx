@@ -1,18 +1,20 @@
 import { ISidebar } from "../../interfaces";
 import styles from "./sidebar.module.scss";
 
-function Sidebar({ setIndex }: ISidebar) {
+function Sidebar({ jobs, currentIndex, setCurrentIndex }: ISidebar) {
   return (
     <div className={styles.sidebar}>
-      <button className={styles.btn} onClick={() => setIndex(0)}>
-        Tommy
-      </button>
-      <button className={styles.btn} onClick={() => setIndex(1)}>
-        BIGDROP
-      </button>
-      <button className={styles.btn} onClick={() => setIndex(2)}>
-        CUKER
-      </button>
+      {jobs.map((item, index) => {
+        return (
+          <button
+            className={`btn ${currentIndex === index ? "active" : ""}`}
+            onClick={() => setCurrentIndex(index)}
+            key={item.id}
+          >
+            {item.company}
+          </button>
+        );
+      })}
     </div>
   );
 }

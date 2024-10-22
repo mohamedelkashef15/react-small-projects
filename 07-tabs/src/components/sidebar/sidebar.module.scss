@@ -8,9 +8,9 @@
     margin: 20px 0;
     text-transform: uppercase;
     cursor: pointer;
-
-    &.actvie {
+    &.active {
       color: $cyan;
+      border: 1px solid #000;
     }
   }
 }

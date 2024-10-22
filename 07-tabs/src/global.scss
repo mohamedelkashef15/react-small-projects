@@ -21,3 +21,14 @@ body {
   max-width: 1000px;
   margin: auto;
 }
+.btn {
+  display: block;
+  border: none;
+  background: transparent;
+  margin: 20px 0;
+  text-transform: uppercase;
+  cursor: pointer;
+  &.active {
+    color: $cyan;
+  }
+}

@@ -1,0 +1,33 @@
+@import "../global.scss";
+
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  .item {
+    img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    h2 {
+      margin: 10px 0;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    .title {
+      color: $purple;
+      text-transform: capitalize;
+    }
+
+    .desc {
+      line-height: 1.6;
+      margin-top: 20px;
+      color: $light-gray;
+    }
+  }
+}
