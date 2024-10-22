@@ -1,6 +1,7 @@
+import { ISidebar } from "../../interfaces";
 import styles from "./sidebar.module.scss";
 
-function Sidebar({ setIndex }) {
+function Sidebar({ setIndex }: ISidebar) {
   return (
     <div className={styles.sidebar}>
       <button className={styles.btn} onClick={() => setIndex(0)}>
