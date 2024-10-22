@@ -6,7 +6,9 @@
   align-items: center;
   height: 100vh;
   text-align: center;
+
   .item {
+    position: relative;
     img {
       width: 150px;
       height: 150px;
@@ -28,6 +30,30 @@
       line-height: 1.6;
       margin-top: 20px;
       color: $light-gray;
+    }
+
+    .btnLeft {
+      position: absolute;
+      left: -50px;
+      top: 50%;
+      background-color: $light-gray;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .btnRight {
+      position: absolute;
+      right: -50px;
+      top: 50%;
+      background-color: $light-gray;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      color: #fff;
+      cursor: pointer;
     }
   }
 }

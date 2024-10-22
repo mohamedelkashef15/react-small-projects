@@ -1,5 +1,6 @@
 import { shortList } from "../data";
 import styles from "./Slider.module.scss";
+import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 
 function Slider() {
   return (
@@ -13,6 +14,12 @@ function Slider() {
               <h2>{name}</h2>
               <p className={styles.title}>{title}</p>
               <p className={styles.desc}>{quote}</p>
+              <button type="button" className={styles.btnLeft}>
+                <FaChevronLeft />
+              </button>
+              <button type="button" className={styles.btnRight}>
+                <FaChevronRight />
+              </button>
             </div>
           );
         })}
