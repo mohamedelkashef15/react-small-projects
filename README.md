@@ -30,3 +30,9 @@ Project Functionality
 Project Functionality
 
 - on click to menu category item display items that includes that category using filter method
+
+## Tabs
+
+Project Functionality
+
+- set an array for the content while click into specific tab display different content by changing the index of the array
