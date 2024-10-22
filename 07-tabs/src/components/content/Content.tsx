@@ -1,8 +1,8 @@
 import { IContent } from "../../interfaces";
 import styles from "./content.module.scss";
-
+import { v4 as uuidv4 } from "uuid";
 function Content({ jobs, index }: IContent) {
-  const { title, company, dates, duties, order, id } = jobs[index];
+  const { title, company, dates, duties } = jobs[index];
 
   return (
     <div className={styles.content}>
@@ -10,8 +10,9 @@ function Content({ jobs, index }: IContent) {
       <p className={styles.company}>{company}</p>
       <p className={styles.dates}>{dates}</p>
       <ul>
-        {duties.map((duty, i) => {
-          return <li key={i}>{duty}</li>;
+        {duties.map((duty) => {
+          const id = uuidv4();
+          return <li key={id}>{duty}</li>;
         })}
       </ul>
     </div>
