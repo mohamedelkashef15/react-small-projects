@@ -19,3 +19,25 @@ body {
   margin: auto;
   padding: 0 5rem;
 }
+
+// Slick Library Styles
+
+.slick-container {
+  margin: 0 auto;
+
+  max-width: 800px;
+  text-align: center;
+  margin-top: 10rem;
+}
+
+.slick-slide img {
+  display: inline-block;
+}
+
+.slick-prev::before {
+  color: $purple;
+}
+
+.slick-next::before {
+  color: $purple;
+}

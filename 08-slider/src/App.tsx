@@ -1,9 +1,11 @@
-import Slider from "./components/Slider";
+// import Slider from "./components/Slider";
+import Slider2 from "./Slider2";
 
 function App() {
   return (
     <main>
-      <Slider />
+      {/* <Slider /> */}
+      <Slider2 />
     </main>
   );
 }
