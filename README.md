@@ -50,3 +50,20 @@ Project Functionality
 - set an array for the content while click into specific tab display different content by changing the index of the array
 
 ![alt](./demo/tabs.png)
+
+## Slider
+
+Project Functionality
+
+- onClick to left/right go prev/next by changing the index of slider
+- use setTimeOut to make slider slide after certain period of time
+
+![alt](./demo/Slider.png)
+
+## Lorem Ipsum
+
+Project functionality
+
+- When click to a form display certain number of paragraphs based on the number that are shown in the input
+
+![alt](./demo/lorem_Ipsum.png)
