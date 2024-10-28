@@ -9,26 +9,21 @@ import { useState } from "react";
 import texts from "./data";
 
 function App() {
-  const [paragraphs, setParagraphs] = useState(texts);
-  const [number, setNumber] = useState(1);
-  const [isActive, setIsActive] = useState(false);
+  const [count, setCount] = useState(1);
+  const [paragraphs, setParagraphs] = useState<string[]>([]);
+
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
-    setNumber(+e.target.value);
+    setCount(+e.target.value);
   }
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+    setParagraphs(texts.slice(0, count));
   }
-
-  function handleClick() {
-    setIsActive(true);
-  }
-
   return (
     <main className="main">
       <div className="container">
         <h1>tired of boring lorem ipsum?</h1>
-
         <form onSubmit={handleSubmit}>
           <div className="form-row">
             <label htmlFor="paragraph">Paragraphs</label>
@@ -36,24 +31,25 @@ function App() {
               type="number"
               name="paragraph"
               id="paragraph"
-              value={number}
               min={1}
               max={texts.length}
+              value={count}
               onChange={handleChange}
             />
-            <button className="btn" type="submit" onClick={handleClick}>
+            <button className="btn" type="submit">
               Generate
             </button>
           </div>
         </form>
-        {isActive &&
-          paragraphs.slice(0, number).map((text, i) => {
+        <article>
+          {paragraphs.map((paragraph, i) => {
             return (
               <div key={i}>
-                <p>{text}</p>
+                <p>{paragraph}</p>
               </div>
             );
           })}
+        </article>
       </div>
     </main>
   );
