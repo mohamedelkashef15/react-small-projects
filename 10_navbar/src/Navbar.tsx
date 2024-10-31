@@ -1,5 +1,6 @@
 import styles from "./Navbar.module.scss";
 import { socials, links } from "./data";
+import { FaBars } from "react-icons/fa";
 
 function Navbar() {
   return (
@@ -9,7 +10,7 @@ function Navbar() {
           Mohamed <span className="text-primary">Elkashef</span>
         </h1>
 
-        <ul>
+        <ul className="list active">
           {links.map((link) => {
             return (
               <li key={link.id}>
@@ -18,6 +19,9 @@ function Navbar() {
             );
           })}
         </ul>
+        <div className={styles.bars}>
+          <FaBars />
+        </div>
 
         <div className={styles.social}>
           {socials.map((social) => {
