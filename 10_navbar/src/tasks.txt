@@ -1,0 +1,5 @@
+Project Tasks
+  - show bars on small screen 
+    - OnClick to bars toggle (show/hide) menu
+    
+  - Add transition when clicking into the bars for height 

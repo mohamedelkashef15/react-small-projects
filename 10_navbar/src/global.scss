@@ -46,15 +46,18 @@ a {
     justify-content: space-between;
     align-items: center;
     height: 80px;
-    ul {
-      display: flex;
+    .list-container {
+      // height: auto;
+      .list {
+        display: flex;
 
-      li {
-        margin: 0 5px;
+        li {
+          margin: 0 5px;
 
-        a {
-          text-transform: capitalize;
-          color: #000;
+          a {
+            text-transform: capitalize;
+            color: #000;
+          }
         }
       }
     }
@@ -67,26 +70,41 @@ a {
   }
 }
 
+@media (min-width: 850px) {
+  .list-container {
+    height: auto !important;
+  }
+}
+
 @media (max-width: 850px) {
   .navbar {
     nav {
       position: relative;
-      .list {
-        opacity: 0;
+      .list-container {
+        // opacity: 0;
         background-color: #fff;
         position: absolute;
         top: 80px;
         left: 0;
         width: 100%;
         padding: 0 2rem;
-        flex-direction: column;
-        li {
-          margin: 12px 0;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        .list {
+          flex-direction: column;
+          li {
+            margin: 12px 0;
+
+            transition: all 0.3s ease;
+            &:hover {
+              padding-left: 1rem;
+            }
+          }
         }
 
-        &.active {
-          opacity: 1;
-        }
+        // &.active {
+        //   opacity: 1;
+        // }
       }
     }
     .social {
@@ -98,6 +116,11 @@ a {
       opacity: 1;
       font-size: 25px;
       cursor: pointer;
+      transition: all 0.4s ease;
+
+      &:hover {
+        transform: rotate(90deg);
+      }
     }
   }
 }
