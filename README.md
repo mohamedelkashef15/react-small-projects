@@ -67,3 +67,13 @@ Project functionality
 - When click to a form display certain number of paragraphs based on the number that are shown in the input
 
 ![alt](./demo/lorem_Ipsum.png)
+
+## 10 Navbar
+
+Project Tasks
+
+- show bars on small screen
+  - OnClick to bars toggle (show/hide) menu
+- Add transition when clicking into the bars for height
+
+![alt](./demo/Navbar.png)
