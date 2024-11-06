@@ -1,10 +1,12 @@
 # react-small-projects
 
-## backroads
+## 1 Backroads
 
 ![alt](./demo/backroads.png)
 
-## Tours
+## 2 Birthday buddy
+
+## 3 Tours
 
 Project Functionality
 
@@ -16,7 +18,7 @@ Project Functionality
 
 ![alt](./demo/tours.png)
 
-## Reviews
+## 4 Reviews
 
 Project Functionality
 
@@ -26,7 +28,7 @@ Project Functionality
 
 ![alt](./demo/reviews.png)
 
-## Accordion
+## 5 Accordion
 
 Project Functionality
 
@@ -35,7 +37,7 @@ Project Functionality
 
 ![alt](./demo/accordion.png)
 
-## Menu
+## 6 Menu
 
 Project Functionality
 
@@ -43,7 +45,7 @@ Project Functionality
 
 ![alt](./demo/menu.png)
 
-## Tabs
+## 7 Tabs
 
 Project Functionality
 
@@ -51,7 +53,7 @@ Project Functionality
 
 ![alt](./demo/tabs.png)
 
-## Slider
+## 8 Slider
 
 Project Functionality
 
@@ -60,7 +62,7 @@ Project Functionality
 
 ![alt](./demo/Slider.png)
 
-## Lorem Ipsum
+## 9 Lorem Ipsum
 
 Project functionality
 
