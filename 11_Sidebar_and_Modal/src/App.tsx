@@ -1,5 +1,11 @@
+import Sidebar from "./Sidebar";
+
 function App() {
-  return <div>App</div>;
+  return (
+    <main>
+      <Sidebar />
+    </main>
+  );
 }
 
 export default App;
