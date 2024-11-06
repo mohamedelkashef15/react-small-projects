@@ -19,13 +19,22 @@ body {
   color: $sky-blue;
 }
 
+.btn-xmark {
+  border: none;
+  background-color: transparent;
+  color: $dark-red;
+  font-size: 30px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
 .sidebar {
-  display: none;
   background-color: #fff;
   width: 400px;
   height: 100vh;
   position: fixed;
   padding: 2rem;
+  transition: all 0.3s ease;
   .heading {
     display: flex;
     justify-content: space-between;
@@ -34,15 +43,6 @@ body {
       font-size: 24px;
       font-weight: 500;
       text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
-    }
-
-    .btn {
-      border: none;
-      background-color: transparent;
-      color: $dark-red;
-      font-size: 30px;
-      margin-top: 10px;
-      cursor: pointer;
     }
   }
   nav {
@@ -69,5 +69,44 @@ body {
         }
       }
     }
+  }
+}
+
+.bars {
+  padding: 2rem;
+  font-size: 30px;
+  cursor: pointer;
+  position: fixed;
+}
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  .modal-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 200px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    position: relative;
+    button {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+  }
+  .modal-btn {
+    margin: auto;
+    cursor: pointer;
+    padding: 8px 15px;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    background-color: $sky-blue;
   }
 }
