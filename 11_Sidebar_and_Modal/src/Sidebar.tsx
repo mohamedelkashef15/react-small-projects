@@ -1,53 +1,42 @@
-import { useContext } from "react";
-
-import { FaCalendarAlt, FaCalendar, FaFolderOpen, FaHome } from "react-icons/fa";
-import { HiUsers } from "react-icons/hi2";
-import { CrossContext } from "./App";
-import { FaXmark } from "react-icons/fa6";
+import { FaTimes } from "react-icons/fa";
+import { links, social } from "./data";
+import useGlobalContext from "./useGlobalContext";
 
 function Sidebar() {
-  const { isActive, setIsActive } = useContext(CrossContext);
-
-  function handleClick() {
-    setIsActive(!isActive);
-  }
+  const { isSidebarOpen, closeSidebar } = useGlobalContext();
   return (
-    <>
-      <aside className="sidebar">
-        <div className="heading">
-          <h2>
-            Mohamed <span className="text-primary"> Elkashef</span>
-          </h2>
-          <button className="btn-xmark" type="button" onClick={handleClick}>
-            <FaXmark />
-          </button>
-        </div>
-        <nav>
-          <ul>
-            <li>
-              <FaHome />
-              <a href="#">Home</a>
+    <aside className={`sidebar ${isSidebarOpen && "show-sidebar"}`}>
+      <div className="sidebar-header">
+        <h2>Mohamed Elkashef</h2>
+        <button type="button" className="close-btn" onClick={closeSidebar}>
+          <FaTimes />
+        </button>
+      </div>
+
+      <ul className="links">
+        {links.map((link) => {
+          const { id, url, text, icon } = link;
+          return (
+            <li key={id}>
+              <a href={url}>
+                {icon}
+                {text}
+              </a>
             </li>
-            <li>
-              <HiUsers />
-              <a href="#">Team</a>
+          );
+        })}
+      </ul>
+      <ul className="social-links">
+        {social.map((link) => {
+          const { id, url, icon } = link;
+          return (
+            <li key={id}>
+              <a href={url}>{icon}</a>
             </li>
-            <li>
-              <FaFolderOpen />
-              <a href="#">Project</a>
-            </li>
-            <li>
-              <FaCalendar />
-              <a href="#">Calender</a>
-            </li>
-            <li>
-              <FaCalendarAlt />
-              <a href="#">Documents</a>
-            </li>
-          </ul>
-        </nav>
-      </aside>
-    </>
+          );
+        })}
+      </ul>
+    </aside>
   );
 }
 
