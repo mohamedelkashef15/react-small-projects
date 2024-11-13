@@ -18,10 +18,10 @@ function Navbar() {
             );
           })}
         </ul>
+        <button type="button" className="btn-bars" onClick={openSidebar}>
+          <FaBars />
+        </button>
       </nav>
-      <button type="button" className="btn-bars" onClick={openSidebar}>
-        <FaBars />
-      </button>
     </div>
   );
 }
