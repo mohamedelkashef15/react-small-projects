@@ -3,21 +3,23 @@ import sublinks from "./data";
 import useGlobalContext from "./useGlobalContext";
 
 function Navbar() {
-  const { openSidebar } = useGlobalContext();
+  const { openSidebar, setPageId } = useGlobalContext();
+
   return (
     <div className="navbar">
       <nav>
         <h3>strapi</h3>
-        <ul>
+        <div className="nav-links">
           {sublinks.map((link) => {
             const { pageId, page } = link;
+            console.log(pageId);
             return (
-              <li key={pageId}>
-                <a href="#">{page}</a>
-              </li>
+              <button key={pageId} onMouseEnter={() => setPageId(pageId)}>
+                {page}
+              </button>
             );
           })}
-        </ul>
+        </div>
         <button type="button" className="btn-bars" onClick={openSidebar}>
           <FaBars />
         </button>

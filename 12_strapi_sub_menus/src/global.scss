@@ -33,20 +33,18 @@ body {
       font-size: 38px;
     }
 
-    ul {
-      list-style: none;
+    .nav-links {
       display: flex;
       justify-content: center;
       align-items: center;
 
-      li {
-        a {
-          text-decoration: none;
-          margin: 0 20px;
-          color: #fff;
-          font-weight: 500;
-          font-size: 20px;
-        }
+      button {
+        margin: 0 20px;
+        color: #fff;
+        background-color: transparent;
+        border: none;
+        font-weight: 500;
+        font-size: 20px;
       }
     }
   }
@@ -115,6 +113,12 @@ body {
   }
 }
 
+.sidebar.show-sidebar {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s;
+}
+
 .hero {
   text-align: center;
   height: calc(100vh - 80px);
@@ -134,19 +138,13 @@ body {
 
 @media (max-width: 900px) {
   .navbar {
-    nav {
-      ul {
+    .nav-links {
+      button {
         display: none;
       }
     }
     .btn-bars {
       display: block;
     }
-  }
-
-  .sidebar.show-sidebar {
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 0.3s ease-in;
   }
 }
