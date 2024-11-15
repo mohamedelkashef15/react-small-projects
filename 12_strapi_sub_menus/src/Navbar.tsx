@@ -12,9 +12,8 @@ function Navbar() {
         <div className="nav-links">
           {sublinks.map((link) => {
             const { pageId, page } = link;
-            console.log(pageId);
             return (
-              <button key={pageId} onMouseEnter={() => setPageId(pageId)}>
+              <button key={pageId} onMouseEnter={() => setPageId(pageId)} onMouseLeave={() => setPageId(null)}>
                 {page}
               </button>
             );

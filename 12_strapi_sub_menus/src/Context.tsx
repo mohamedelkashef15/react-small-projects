@@ -5,7 +5,7 @@ type AppContextType = {
   openSidebar: () => void;
   closeSidebar: () => void;
   pageId: string | null;
-  setPageId: (val: string) => void;
+  setPageId: (val: string | null) => void;
 };
 
 const AppContext = createContext<AppContextType | undefined>(undefined);
