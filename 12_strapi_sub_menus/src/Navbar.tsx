@@ -10,16 +10,16 @@ function Navbar() {
       <nav>
         <h3>strapi</h3>
         <div className="nav-links">
-          {sublinks.map((link) => {
-            const { pageId, page } = link;
+          {sublinks.map((item) => {
+            const { page, pageId } = item;
             return (
-              <button key={pageId} onMouseEnter={() => setPageId(pageId)} onMouseLeave={() => setPageId(null)}>
+              <button key={pageId} onMouseEnter={() => setPageId(pageId)}>
                 {page}
               </button>
             );
           })}
         </div>
-        <button type="button" className="btn-bars" onClick={openSidebar}>
+        <button className="btn-bars" onClick={openSidebar}>
           <FaBars />
         </button>
       </nav>
@@ -28,8 +28,3 @@ function Navbar() {
 }
 
 export default Navbar;
-/*
-
-In the Navbar, for now, set up a logo (h3) and a button to open the sidebar. Grab the openSidebar function from the global context. Optionally, you can install and set up an icon from react-icons in the toggle button. Add CSS for the Navbar.
-
-*/

@@ -4,14 +4,15 @@ type AppContextType = {
   isSidebarOpen: boolean;
   openSidebar: () => void;
   closeSidebar: () => void;
-  pageId: string | null;
+  pageId: null | string;
   setPageId: (val: string | null) => void;
 };
 
 const AppContext = createContext<AppContextType | undefined>(undefined);
 export function AppProvider({ children }: { children: React.ReactNode }) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [pageId, setPageId] = useState<string | null>(null);
+  const [pageId, setPageId] = useState(null);
+
   function openSidebar() {
     setIsSidebarOpen(true);
   }
