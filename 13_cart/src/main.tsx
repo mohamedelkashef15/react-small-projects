@@ -3,9 +3,12 @@ import { StrictMode } from "react";
 import App from "./App.tsx";
 import "./global.scss";
 import "./index.css";
+import { AppProvider } from "./Context.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <App />
+    <AppProvider>
+      <App />
+    </AppProvider>
   </StrictMode>
 );
